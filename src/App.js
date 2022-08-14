@@ -1,7 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import CustomButton from './Components/CustomButton/CustomButton';
+import MuiButton from './Components/MuiButton/MuiButton';
 
 function App() {
+
+  function handleClickCustom() {
+    console.log("Custom button");
+  }
+
+  function handleClickMui() {
+    window.alert("Mui button")
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +28,20 @@ function App() {
         >
           Learn React
         </a>
+        <h1>Buttons!</h1>
+        <div>
+          <button onClick={() => console.log("Standard Button")}>Standard</button>
+          <br />
+          <CustomButton 
+             label={"Custom "}
+             handleClick={handleClickCustom}
+          />
+          <br />
+          <MuiButton 
+              label={"Mui Button"}
+              handleClick={handleClickMui}
+          />
+        </div>
       </header>
     </div>
   );
