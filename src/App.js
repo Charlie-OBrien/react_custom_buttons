@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import CustomButton from './Components/CustomButton/CustomButton';
 import MuiButton from './Components/MuiButton/MuiButton';
+import Link from './Components/Link';
 
 function App() {
 
@@ -43,6 +44,10 @@ function App() {
           />
         </div>
       </header>
+      <Link page={"www.huffpost.com"}
+      children={"This"}
+      className
+      />
     </div>
   );
 }
